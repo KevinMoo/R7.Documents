@@ -4,18 +4,18 @@
 
 -- Alter tables
 
-IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = object_id(N'{databaseOwner}[{objectQualifier}Documents_Documents]') AND name = N'LinkAttributes')
+IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = object_id(N'{databaseOwner}[{objectQualifier}Documents_Documents]') and name = N'LinkAttributes')
 	ALTER TABLE {databaseOwner}[{objectQualifier}Documents_Documents]
 		ADD [LinkAttributes] nvarchar(255) NULL
 GO
 
 -- Drop stored procedures 
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}{objectQualifier}Documents_GetDocument') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = object_id(N'{databaseOwner}{objectQualifier}Documents_GetDocument') and type in (N'P', N'PC'))
 	DROP PROCEDURE {databaseOwner}{objectQualifier}Documents_GetDocument
 GO
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'{databaseOwner}{objectQualifier}Documents_GetDocuments') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
+IF EXISTS (SELECT * FROM sys.objects WHERE object_id = object_id(N'{databaseOwner}{objectQualifier}Documents_GetDocuments') and type in (N'P', N'PC'))
 	DROP PROCEDURE {databaseOwner}{objectQualifier}Documents_GetDocuments
 GO
 
