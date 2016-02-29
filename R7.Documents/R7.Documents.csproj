@@ -38,25 +38,28 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Telerik.Web.UI">
-      <HintPath>..\packages\DotNetNuke.Web.7.4.2.216\lib\net40\Telerik.Web.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetNuke.WebUtility">
-      <HintPath>..\packages\DotNetNuke.Web.7.4.2.216\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.WebRequest" />
-    <Reference Include="DotNetNuke">
-      <HintPath>..\packages\DotNetNuke.Core.7.4.2.216\lib\net40\DotNetNuke.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
-      <HintPath>..\packages\DotNetNuke.Core.7.4.2.216\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="DotNetNuke.Web">
-      <HintPath>..\packages\DotNetNuke.Web.7.4.2.216\lib\net40\DotNetNuke.Web.dll</HintPath>
-    </Reference>
     <Reference Include="DotNetNuke.R7">
       <HintPath>..\packages\DotNetNuke.R7.0.3.1\lib\net45\DotNetNuke.R7.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke">
+      <HintPath>..\packages\DotNetNuke.Core.8.0.0.809\lib\net40\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\packages\DotNetNuke.Core.8.0.0.809\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web">
+      <HintPath>..\packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.WebUtility">
+      <HintPath>..\packages\DotNetNuke.Web.8.0.0.809\lib\net40\DotNetNuke.WebUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web.Deprecated">
+      <HintPath>lib\DotNetNuke.Web.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>lib\Telerik.Web.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +68,7 @@
     <Folder Include="GridStyles\" />
     <Folder Include="Properties\" />
     <Folder Include="Models\" />
+    <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="module.css" />
@@ -98,6 +102,8 @@
     <None Include="GridStyles\dnn.xml" />
     <None Include="GridStyles\bootstrap-condensed.xml" />
     <None Include="SqlDataProvider\01.00.08.SqlDataProvider" />
+    <None Include="lib\DotNetNuke.Web.Deprecated.dll" />
+    <None Include="lib\Telerik.Web.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="components\DocumentsSettings.cs" />
